@@ -1,0 +1,61 @@
+body {
+	font-size: 14px;
+}
+
+.color-primary {
+	color: #3e6250;
+}
+
+.customBtn {
+	background-color: #3e6250;
+	color: white;
+	border-radius: 50px;
+	border: none;
+	padding: 3px 20px;
+}
+
+.customInput {
+	border-radius: 50px;
+	text-align: center;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.customList {
+	margin-left: 24px !important;
+	margin-top: 16px !important;
+}
+
+.loggedItems {
+	margin-top: 16px !important;
+}
+
+.noSpacing {
+	padding: 0;
+	margin: 0;
+}
+
+.item {
+	padding: 10px 0px;
+}
+
+.remove {
+	margin-left: 30px;
+}
+
+
+@media screen and (max-width: 786px) {
+ .customBtn {
+    width: 180px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+  }
+
+  .customList {
+	margin-left: 0px !important;
+	margin-top: 0px !important;
+	padding-left: 0px !important;
+}
+}
