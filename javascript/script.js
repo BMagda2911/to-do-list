@@ -1,4 +1,5 @@
-function addOrRemoveListItem() {
+$(function() {
+	$.fn.addOrRemoveListItem = function() {
 		let inputValue = $("input").val();
 		if(inputValue !== '') {
 			let listElement = $("<li class='list-group-item list-group-item-action list-group-item-success align-middle'></li>").text(inputValue);
@@ -10,16 +11,19 @@ function addOrRemoveListItem() {
 				$(this).parent().remove();
 			});
 		}
-}
+	}
+});
 
-function addOrRemoveLogStamp() {
-	let timeNDate = $("<li class='item align-middle remove-log'>Item added on " + document.lastModified + " </li>");
-	$("#logList").append(timeNDate);
-	$("#clearLog").on("click", function() {
-		$(this).next().remove();
-		location.reload();
-	});
-}
+$(function() {
+	$.fn.addOrRemoveLogStamp = function() {
+		let timeNDate = $("<li class='item align-middle remove-log'>Item added on " + document.lastModified + " </li>");
+		$("#logList").append(timeNDate);
+		$("#clearLog").on("click", function() {
+			$(this).next().remove();
+			location.reload();
+		});
+	}
+});
 
 $(function() {
 	$("#inputField").on("keyup", function(event) {
@@ -27,13 +31,13 @@ $(function() {
 		if (event.keyCode === 13) {
 			event.preventDefault(); // cancel the default action
 			// event handler
-			addOrRemoveListItem();
-			addOrRemoveLogStamp();
+			$.fn.addOrRemoveListItem();
+			$.fn.addOrRemoveLogStamp();
 		}
 	});
 	$("#add").on("click", function() {
 		// event handler
-		addOrRemoveListItem();
-		addOrRemoveLogStamp();
+		$.fn.addOrRemoveListItem();
+		$.fn.addOrRemoveLogStamp();
 	});
 });
