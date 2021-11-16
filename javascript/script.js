@@ -6,9 +6,8 @@ $(function() {
 			$(listElement).append("<button type='button' class='btn-close remove' aria-label='Close'></button>");
 			$("#myList").append(listElement);
 			$("input").val(""); // clears the input field
-			// removes parent of the current object, which is parent of the remove button, the <li> element.
 			$(".remove").on("click", function() {
-				$(this).parent().remove();
+				$(this).parent().remove();// removes parent of the current object, which is parent of the remove button, the <li> element.
 			});
 		}
 	}

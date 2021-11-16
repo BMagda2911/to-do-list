@@ -27,17 +27,15 @@ body {
 	margin-top: 16px !important;
 }
 
-.loggedItems {
-	margin-top: 16px !important;
-}
-
 .noSpacing {
 	padding: 0;
 	margin: 0;
 }
 
 .item {
-	padding: 10px 0px;
+	padding: 12px 0px;
+	-webkit-padding-before: 9px;
+	-webkit-padding-after: 9px;
 }
 
 .remove {
